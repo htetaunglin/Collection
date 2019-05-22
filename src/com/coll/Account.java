@@ -7,13 +7,15 @@ public class Account implements Comparable<Account> {
 	private boolean active;
 	private LocalDate registDate;
 	private String name;
+	private int age;
 
-	public Account(String email, boolean active, LocalDate registDate, String name) {
+	public Account(String email, boolean active, LocalDate registDate, String name, int age) {
 		super();
 		this.email = email;
 		this.active = active;
 		this.registDate = registDate;
 		this.name = name;
+		this.age = age;
 	}
 
 	public String getEmail() {
@@ -48,9 +50,18 @@ public class Account implements Comparable<Account> {
 		this.name = name;
 	}
 
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
 	@Override
 	public String toString() {
-		return "Login ID : " + email + "\nName : " + name + "\nActive : " + active + "\nRegistered : " + registDate;
+		return "Login ID : " + email + "\nName : " + name + "\nAge : " + age + "\nActive : " + active
+				+ "\nRegistered : " + registDate;
 	}
 
 	@Override
