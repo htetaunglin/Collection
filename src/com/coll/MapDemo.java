@@ -1,6 +1,7 @@
 package com.coll;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class MapDemo {
@@ -12,10 +13,8 @@ public class MapDemo {
 		s.setAddress("Yangon");
 
 		List<Course> courseList = new ArrayList<Course>();
-		courseList.add(new Course());
-		courseList.add(new Course());
-		courseList.add(new Course());
-		courseList.add(new Course());
-		s.setCourses(courseList);
+		Collections.addAll(courseList, new Course("Java SE", 100, 5000.0, "1"), new Course("Java EE", 100, 5000.0, "1"),
+				new Course("Java SE", 100, 5000.0, "2"), new Course("Java SE", 100, 5000.0, "1"));
+
 	}
 }
